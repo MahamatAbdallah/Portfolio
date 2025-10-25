@@ -4,19 +4,7 @@
     Date: Juin 2024
     */
 /* Pour les écrans de moins de 768px (tablettes et mobiles) */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
 
-  .menu {
-    flex-direction: column; /* menu vertical sur mobile */
-  }
-
-  .container {
-    padding: 10px; /* moins d’espace sur mobile */
-  }
-}
 
     .hero-section {
     display: flex;
@@ -164,7 +152,7 @@ body {
 /* --- Header --- */
 .site-header {
     background-color: #332f2f;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     position: fixed;
     top: 0;
@@ -185,8 +173,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
+    gap: 20px;
 }
 
 /* Liens du menu */
@@ -194,7 +184,7 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    padding: 5px 0;
+    padding: 5px 10px;
     transition: color 0.3s, border-bottom 0.3s;
 }
 
@@ -203,17 +193,29 @@ body {
     border-bottom: 2px solid #ff6347;
 }
 
+/* Logo */
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         text-align: center;
-        width: auto;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-list li a {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+    .nav-logo img {
+        height: 40px;
     }
 }
-
-
 
 
 /* Encadrer uniquement les liens sans image */
