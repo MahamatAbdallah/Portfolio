@@ -3,6 +3,20 @@
     Auteur: Mahamat Abdallah Adam
     Date: Juin 2024
     */
+/* Pour les écrans de moins de 768px (tablettes et mobiles) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .menu {
+    flex-direction: column; /* menu vertical sur mobile */
+  }
+
+  .container {
+    padding: 10px; /* moins d’espace sur mobile */
+  }
+}
 
     .hero-section {
     display: flex;
