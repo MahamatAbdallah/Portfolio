@@ -1,0 +1,748 @@
+/*Bienvenue*
+    Styles CSS pour le Portfolio de Mahamat Abdallah Adam
+    Auteur: Mahamat Abdallah Adam
+    Date: Juin 2024
+    */
+
+    .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: -20px -10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Texte à gauche */
+.hero-content {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: #ff6347; /* Couleur accent */
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Bouton principal */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e5533d;
+    transform: translateY(-3px);
+}
+
+/* Image à droite */
+.hero-image {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1s forwards;
+}
+
+.portfolio-banner {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.portfolio-banner:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-content, .hero-image {
+        transform: none;
+        opacity: 1;
+        animation: none;
+    }
+
+    .portfolio-banner {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/*Fin bienvenue  */
+
+/* --- Style général --- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #181717;
+    
+    /* espace pour le header fixe */
+    padding-top: 200px;
+}
+.portfolio-intro {
+    text-align:left;
+    margin-bottom: 80px;
+}
+
+/* Logo */
+.nav-logo .logo-image {
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* --- Container --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: #332f2f;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Navigation --- */
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Liens du menu */
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: auto;
+    }
+}
+
+
+
+
+/* Encadrer uniquement les liens sans image */
+.nav-list li a:not(:has(img)) {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* Hover */
+.nav-list li a:not(:has(img)):hover {
+    background-color: #ff6347;
+    color: #fff;
+    border-color: #ff6347;
+}
+
+
+
+/* --- Image de fond --- */
+.portfolio-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Texte à gauche avec animation */
+.intro-text {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s forwards;
+}
+
+/* Image à droite avec animation */
+.intro-image {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1s forwards;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Image responsive */
+.portfolio-banner {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.portfolio-banner:hover {
+    transform: scale(1.05) rotate(1deg); /* effet stylé au survol */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-image {
+        margin-top: 20px;
+    }
+}
+
+/* --- Section Compétences --- */
+
+/* --- Projets --- */
+.projects {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid des projets */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Cartes projets */
+.project-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 25px 20px;
+    flex: 1 1 300px; /* largeur min 300px */
+    max-width: 350px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet hover sur chaque projet */
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Animation entrée */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titres et textes */
+.project-item h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ff6347;
+}
+
+.project-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+ /* --- Compétences Technique--- */
+.skills {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Liste des compétences */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-list li {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpSkill 0.8s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet hover */
+.skills-list li:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Animation entrée */
+@keyframes slideUpSkill {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #222;       /* fond sombre élégant */
+    color: #fff;                  /* texte clair */
+    text-align: center;           /* centré horizontalement */
+    padding: 30px 20px;           /* espace intérieur */
+    margin-top: 80px;             /* espace au-dessus du footer */
+    font-size: 0.95rem;           /* taille légèrement réduite */
+    letter-spacing: 0.5px;        /* espace subtil entre les lettres */
+    border-top: 3px solid #ff6347; /* rappel de la couleur principale */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation douce à l’arrivée */
+.site-footer p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Animation keyframe */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet visuel subtil en fond */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,99,71,0.15), rgba(255,255,255,0.05), rgba(255,99,71,0.15));
+    animation: moveLight 6s linear infinite;
+    z-index: 0;
+}
+
+/* Animation du dégradé */
+@keyframes moveLight {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(50%); }
+}
+
+.site-footer p {
+    position: relative;
+    z-index: 1; /* au-dessus de l’effet de fond */
+}
+/* Fin Footer */
+
+/*Contact Section*/
+.contact-section {
+    padding: 100px 20px;
+    background: #fafafa;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* --- Texte à gauche --- */
+.contact-text {
+    flex: 1;
+    animation: fadeInLeft 1s forwards;
+}
+
+.contact-text h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* --- Formulaire à droite --- */
+.contact-form {
+    flex: 1;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: fadeInRight 1s forwards;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255,99,71,0.3);
+    outline: none;
+}
+
+/* --- Bouton --- */
+.btn-submit {
+    display: inline-block;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #e5533d;
+    transform: translateY(-2px);
+}
+
+/* --- Animations --- */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+    /*Fin bienvenue  */ 
+
+    /* --- Cookis --- */
+    /* --- Cookie Banner --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    border-top: 2px solid #ff6347;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+    z-index: 2000;
+    display: none; /* cachée par défaut */
+    animation: slideUp 0.8s ease forwards;
+}
+
+.cookie-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cookie-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.cookie-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.cookie-content .read-more {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cookie-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-accept, .btn-decline {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-accept {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.btn-accept:hover {
+    background-color: #e5533d;
+    transform: translateY(-2px);
+}
+
+.btn-decline {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn-decline:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cookie-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+    /* Fin Cookis  */
+
+
+
+
+
+    .section-title {
+    text-align: center;
+    margin: 100px 0 60px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.section-title h2 {
+    font-size: 2.6rem;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2 span {
+    color: #ff6347; /* couleur principale */
+}
+
+/* Ligne décorative sous le titre */
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff6347;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+/* Quand le titre devient visible */
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title.visible h2::after {
+    width: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
