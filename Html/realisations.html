@@ -1,60 +1,295 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Mahamat Abdallah Adam</title>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Mahamat Abdallah Adam</title>
 
-    <meta name="description" content="Portfolio de Mahamat Abdallah Adam, expert en cybersécurité, développeur web, ingénieur Réseaux, systèmes et sécurité . Découvrez mes projets et compétences.">
-     <meta name="keywords" content="Portfolio, Mahamat Abdallah Adam, expert en cybersécurité, développeur web, ingénieur Réseaux, systèmes, sécurité, projets, compétences, technologies, sécurité informatique, développement web, réseaux informatiques, ingénierie des systèmes, sécurité des réseaux, cybersécurité avancée, programmation, administration système, infrastructure IT, solutions de sécurité, audit de sécurité, gestion des risques, technologies émergentes, innovation technologique, expertise technique, Mahamat Adam, Abdallah Adam, ingénieur IT, développeur full-stack, sécurité des données, protection des informations, architecture réseau, systèmes d'exploitation, cloud computing, virtualisation, sécurité des applications, développement sécurisé, tests de pénétration, analyse de vulnérabilités, conformité réglementaire, sécurité des infrastructures, gestion des incidents, formation en cybersécurité.">
+  <meta name="description" content="Portfolio de Mahamat Abdallah Adam, expert en cybersécurité, développeur web, ingénieur Réseaux, systèmes et sécurité. Découvrez mes projets et compétences.">
+  <meta name="author" content="Mahamat Abdallah Adam">
 
-    <meta name="author" content="Mahamat Abdallah Adam">
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
-    <!-- Bootstrap CSS -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Feuilles de style CSS -->
-    <link rel="stylesheet" href="../CSS/styles.css">
-
-    <!-- Fonts externes (Google Fonts par exemple) -->
-    <link href="" rel="stylesheet">
-
+  <!-- Feuilles de style CSS -->
+  <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
 <body>
-    <div class="container">
-   <!-- Inclure le header -->
-<div id="header-placeholder"></div>
-    </div>
-    <main>
-    <h2><span>Réseaux et sécurité</span></h2>
-      <!--Contact-->
-<div id="contact-placeholder"></div>        <!-- Fin Contact Section-->
-
-    </main
-               <!-- Inclure le Contact-->
-    <div id="footer-placeholder"></div>
-
-    <!-- Cookie Consent Banner -->
-
-<!-- RELIEMENT des pages -->
-
-<script>
-function loadHTML(id, file){
-    fetch(file)
-    .then(response => response.text())
-    .then(data => document.getElementById(id).innerHTML = data);
-}
-
-loadHTML("header-placeholder", "header.html");
-loadHTML("contact-placeholder", "contact.html");
-loadHTML("footer-placeholder", "footer.html");
-</script>
+  <!-- En-tête -->
+ 
+    <header class="site-header">
+    <nav class="navigation-menu">
+        <ul class="nav-list">
+            <li class="nav-logo">
+                <a href="#bienvenue">
+                    <img src="../images/logo.png" alt="Logo de Mahamat Abdallah Adam" class="logo-image">
+                </a>
+            </li>
+            <li><a href="../index.html#bienvenue">Accueil</a></li>
+            <li><a href="../index.html#projets">Projets</a></li>
+            <li><a href="../index.html#competences">Compétences</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="realisations.html">Mes Réalisations</a></li>
+        </ul>
+    </nav>
+</header>
+  <!-- Contenu principal -->
+  <main id="main-content"></main>
+ <section id="bienvenue" class="portfolio-intro">
+       
+    <div class="hero-content">
+        <h1>Bienvenue sur mon <span>Portfolio</span></h1>
+        <p>
+            Je suis <strong>Mahamat Abdallah Adam</strong>, expert en 
+            <strong>cybersécurité</strong>, 
+            <strong>développement web</strong> et 
+            <strong>ingénierie réseaux, systèmes et sécurité</strong>. <br>
+            Découvrez mes projets et mes compétences dans le domaine de la 
+            <strong>technologie</strong> et de la 
+            <strong>sécurité informatique</strong>.
+        </p>
     
-<script src="../JavaScript/script.js"></script>
+    </div>
 
+    <div class="hero-image">
+      <div class="realisation-card">
+    <div class="realisation-video">
+        <video autoplay muted loop playsinline>
+            <source src="../images/vid1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="realisation-info">
+        <h3>Protection de systèmes d'information</h3>
+        <p>Système d'information est l'élément central de l'activité de votre entrprise.</p>
+    </div>
+</div>
+    </div>
+</section>
+
+<section id="realisations" class="realisations-section">
+    <div class="container">
+
+        <div class="realisations-grid">
+            <!-- Projet 1 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/vurt1.png" alt="Projet 1">
+                </div>
+                <div class="realisation-info">
+                    <h3> 1-Virtualisation</h3>
+                    <p>Virtualisation d'un Système d'exploitation UBUNTU sous VirtualBox.</p>
+                  </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/vurl3.png" alt="Projet 2">
+                </div>
+                <div class="realisation-info">
+                    <h3>2-Vurtilialisation</h3>
+                    <p>Virtualisation d'un Système d'exploitation UBUNTU sous VirtualBox.</p>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/vurt4.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>3-Virtualisation</h3>
+                    <p>Virtualisation d'un Système d'exploitation UBUNTU sous VirtualBox.</p>
+                  </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/vurt2.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>3-Virtualisation</h3>
+                    <p>Une brève description du projet, les technologies utilisées et l'objectif principal.</p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/res2.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Réseaux</h3>
+                    <p>Simulation d'un réseau LAN sous Cisco PacketTracert.</p>
+                </div>
+            </div>
+             <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/res2.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Réseaux</h3>
+                    <p>Simulation d'un réseau LAN sous Cisco PacketTracert.</p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/iptables.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Pare-feu</h3>
+                    <p>Configuration d'un pare-feu sous Linux iptables,  filtrer le trafic réseau entrant et sortant. </p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/ssh.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>SSH (Secure Shell)</h3>
+                    <p>Connexion à distance sur port 22, après la vérification de l'identité du serveur et du client, une connexion chiffrée.</p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/ping.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Ping</h3>
+                    <p> Tester la connectivité en envoyant des packet ICMP</p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/msf.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Pentesting</h3>
+                    <p>Métasploit outils puissant pour teste des vulnérabilités.</p>
+                </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/nmap.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Network Mapper</h3>
+                    <p></p>Outil puissant et open-source utilisé pour l'exploration de réseaux et l'audit de sécurité.   </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/wishare.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Wireshark </h3>
+                    <p>Analyse de protocole réseau e qui permet de capturer, d'inspecter et d'analyser le trafic de données en temps réel sur un réseau.</p> </div>
+            </div>
+             <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/app1.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Développement Web</h3>
+                    <p>développemnt d'un site Web (portfolio) statique en utilisant les outils HTML CSS et JavaScript .</p>
+                </div>
+            </div>
+               <!-- Projet 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <img src="../images/app1.png" alt="Projet 3">
+                </div>
+                <div class="realisation-info">
+                    <h3>Développement Web</h3>
+                    <p>développemnt d'un site Web dynamique : E-Bibliothèque .</p>
+                </div>
+            </div>
+            <!-- Ajouter autant de projets que nécessaire -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+        <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <!-- Texte à gauche -->
+        <div class="contact-text">
+                
+    <div class="hero-content">
+        <h1>Contactez- <span>moi</span></h1>
+      
+            </div>
+
+            <p>
+                Vous souhaitez collaborer, poser une question ou simplement échanger ?  
+                Remplissez le formulaire ci-dessous ou écrivez-moi directement — je vous répondrai dès que possible.
+            </p>
+
+            <ul class="contact-info">
+                <li><strong>Email :</strong> abdallahadam.mahamat@esgitech.tn</li>
+                <li><strong>Téléphone :</strong> +216 48 246 410</li>
+                <li><strong>Localisation :</strong> Tunis, Tunisie</li>
+            </ul>
+        </div>
+
+        <!-- Formulaire à droite -->
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
+    </div>
+</section>
+
+    </main>
+
+
+               
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <h3>Cookies et technologies similaires</h3>
+        <p>
+         Nous, nos affiliés et nos fournisseurs utilisons des cookies et des technologies similaires pour comprendre comment vous utilisez notre site,
+optimiser ses fonctionnalités, créer des expériences plus enrichissantes pour vous, assurer la sécurité et le bon fonctionnement de notre site,
+et diffuser des publicités et d'autres contenus adaptés à vos centres d'intérêt.
+            
+        </p>
+        <div class="cookie-buttons">
+            <button id="decline-cookies" class="btn-decline">Je refuse tous les cookies</button>
+            <button id="accept-cookies" class="btn-accept">Je suis d'accord</button>
+        </div>
+    </div>
+</div>
+  <!-- Pied de page -->
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Mahamat Abdallah Adam. Tous droits réservés.</p>
+    </footer>
+
+  
+
+  <script src="JavaScript/script.js"></script>
 </body>
-
 </html>
