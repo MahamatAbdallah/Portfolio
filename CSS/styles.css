@@ -152,7 +152,7 @@ body {
 /* --- Header --- */
 .site-header {
     background-color: #332f2f;
-    padding: 10px 0;
+    padding: 30px 0;
     width: 100%;
     position: fixed;
     top: 0;
@@ -170,7 +170,7 @@ body {
 .nav-list {
     list-style: none;
     margin: 0 auto;
-    padding: 0;
+    padding: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -296,14 +296,22 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .portfolio-intro {
-        flex-direction: column;
-        text-align: center;
+    .nav-list {
+        flex-direction: row; /* garder horizontal */
+        justify-content: center; /* centrer les éléments */
+        gap: 10px; /* réduire un peu l’espacement si nécessaire */
     }
-    .intro-image {
-        margin-top: 20px;
+
+    .nav-list li a {
+        padding: 5px 8px; /* ajuster taille des liens */
+        font-size: 14px; /* un peu plus petit si besoin */
+    }
+
+    .nav-logo img {
+        height: 40px; /* garder le logo proportionnel */
     }
 }
+
 
 /* --- Section Compétences --- */
 
@@ -496,11 +504,13 @@ body {
 /* Fin Footer */
 
 /*Contact Section*/
+/* --- Section Contact --- */
 .contact-section {
     padding: 100px 20px;
     background: #fafafa;
 }
 
+/* Conteneur principal (flexbox) */
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -545,7 +555,7 @@ body {
     background: #fff;
     padding: 40px 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     animation: fadeInRight 1s forwards;
 }
 
@@ -567,7 +577,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #ff6347;
-    box-shadow: 0 0 5px rgba(255,99,71,0.3);
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.3);
     outline: none;
 }
 
@@ -604,6 +614,7 @@ body {
 @media (max-width: 900px) {
     .contact-container {
         flex-direction: column;
+        gap: 30px;
     }
 
     .contact-form {
@@ -766,3 +777,123 @@ body {
         font-size: 2rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Réalisations Section*/
+/* --- Section Réalisations --- */
+.realisations-section {
+    padding: 100px 20px;
+    background: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+.realisations-section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.realisations-section .section-title h2 {
+    font-size: 2.8rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.realisations-section .section-title h2 span {
+    color: #ff6347;
+}
+
+.realisations-section .section-title p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* --- Grid des réalisations --- */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Carte d'une réalisation --- */
+.realisation-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* --- Image du projet --- */
+.realisation-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.realisation-card:hover .realisation-image img {
+    transform: scale(1.05);
+}
+
+/* --- Infos du projet --- */
+.realisation-info {
+    padding: 20px;
+}
+
+.realisation-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.realisation-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .realisation-image img {
+        height: 180px;
+    }
+}
+
+
+
+
+
+/* Fin Réalisations Section */
+
+/*Css Video*/
+/* --- Section Vidéo --- */
+.realisation-video video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+
+
+
+
+
+
+/* Fin Vidéo Section */
