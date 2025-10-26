@@ -449,6 +449,10 @@ body {
     border-top: 3px solid #ff6347; /* rappel de la couleur principale */
     position: relative;
     overflow: hidden;
+    
+    max-width: 100%;   /* ou la largeur que tu souhaites */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Animation douce à l’arrivée */
