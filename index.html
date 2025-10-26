@@ -23,39 +23,25 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"></div>
+    
    <!-- Inclure le header -->
 <div id="header-placeholder"></div>
-    </div>
-    <main>
-
-        <!-- Inclure le Bienvenue -->
-        
-       <div id="bienvenue-placeholder"></div>
-       </section>
-               <!-- Inclure les Projets -->
-        <div id="projet-placeholder"></div>
-           <!-- Inclure les Compétences -->
-        <div id="competence-placeholder"></div>
-        <!--Contact-->
-<div id="contact-placeholder"></div>        <!-- Fin Contact Section-->
-
-    </main
-               <!-- Inclure le Contact-->
-    <div id="footer-placeholder"></div>
-
-    <!-- Cookie Consent Banner -->
-<div id="cookies-placeholder"></div>
-<!-- RELIEMENT des pages -->
+<div id="bienvenue-placeholder"></div>
+<div id="projets-placeholder"></div>
+<div id="competences-placeholder"></div>
+<div id="contact-placeholder"></div>
+<div id="footer-placeholder"></div>
 
 <script>
 function loadHTML(id, file){
     fetch(file)
     .then(response => response.text())
-    .then(data => document.getElementById(id).innerHTML = data);
+    .then(data => document.getElementById(id).innerHTML = data)
+    .catch(err => console.error("Erreur chargement", file, err));
 }
 
-loadHTML("header-placeholder", "Hml/header.html");
+loadHTML("header-placeholder", "Html/header.html");
 loadHTML("bienvenue-placeholder", "Html/bienvenue.html");
 loadHTML("projets-placeholder", "Html/projet.html");
 loadHTML("competences-placeholder", "Html/competence.html");
