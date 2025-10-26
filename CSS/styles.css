@@ -705,7 +705,7 @@ body {
         gap: 10px;
     }
 }
-    /* Fin Cookis  
+    /* Fin Cookis  */
 
 
 
@@ -734,7 +734,7 @@ body {
     color: #ff6347; /* couleur principale */
 }
 
-/* Ligne décorative sous le titre 
+/* Ligne décorative sous le titre */
 .section-title h2::after {
     content: "";
     display: block;
@@ -746,7 +746,7 @@ body {
     transition: width 0.5s ease;
 }
 
-/* Quand le titre devient visible 
+/* Quand le titre devient visible */
 .section-title.visible {
     opacity: 1;
     transform: translateY(0);
