@@ -138,6 +138,12 @@ img, video {
     }
 }
 
+
+
+
+
+
+
 /* ---------- HEADER ET NAVIGATION ---------- */
 .site-header {
     background-color: #332f2f;
@@ -171,29 +177,24 @@ img, video {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    padding: 5px 10px;
     transition: color 0.3s, border-bottom 0.3s;
 }
 
-.nav-list li a:hover {
-    color: #ff6347;
-    border-bottom: 2px solid #ff6347;
-}
-
+/* Logo */
 .nav-logo img {
     height: 50px;
     width: auto;
 }
 
 /* Encadrer uniquement les liens sans image */
-.nav-list li a:not(:has(img)) {
+.nav-link {
     border: 2px solid #ff6347;
     border-radius: 5px;
     padding: 8px 15px;
     transition: all 0.3s;
 }
 
-.nav-list li a:not(:has(img)):hover {
+.nav-link:hover {
     background-color: #ff6347;
     color: #fff;
 }
@@ -205,14 +206,23 @@ img, video {
         align-items: center;
         gap: 10px;
     }
+
     .nav-list li a {
         font-size: 16px;
         padding: 8px 0;
     }
+
     .nav-logo img {
         height: 40px;
     }
 }
+
+
+
+
+
+
+
 
 /* ---------- SECTION INTRO ---------- */
 .portfolio-intro {
