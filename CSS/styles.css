@@ -1,23 +1,50 @@
-/*Bienvenue*
-    Styles CSS pour le Portfolio de Mahamat Abdallah Adam
-    Auteur: Mahamat Abdallah Adam
-    Date: Juin 2024
-    */
-/* Pour les écrans de moins de 768px (tablettes et mobiles) */
+/* ===========================================
+   Portfolio de Mahamat Abdallah Adam
+   Version responsive optimisée – Octobre 2025
+   =========================================== */
 
+/* ---------- RÈGLES GÉNÉRALES ---------- */
+* {
+    box-sizing: border-box;
+}
 
-    .hero-section {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #181717;
+    padding-top: 200px; /* espace pour header fixe */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+}
+
+/* Rendre toutes les images et vidéos fluides */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- SECTION HERO ---------- */
+.hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    padding: -20px -10px;
+    padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-/* Texte à gauche */
 .hero-content {
     flex: 1;
     opacity: 0;
@@ -33,7 +60,7 @@
 }
 
 .hero-content h1 span {
-    color: #ff6347; /* Couleur accent */
+    color: #ff6347;
 }
 
 .hero-content p {
@@ -43,7 +70,6 @@
     margin-bottom: 30px;
 }
 
-/* Bouton principal */
 .btn-primary {
     display: inline-block;
     padding: 12px 25px;
@@ -60,7 +86,6 @@
     transform: translateY(-3px);
 }
 
-/* Image à droite */
 .hero-image {
     flex: 1;
     text-align: center;
@@ -83,25 +108,18 @@
 
 /* Animations */
 @keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes fadeInRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive */
+/* HERO RESPONSIVE */
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
         text-align: center;
-        padding: 60px 20px;
+        gap: 30px;
     }
 
     .hero-content, .hero-image {
@@ -110,46 +128,17 @@
         animation: none;
     }
 
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
     .portfolio-banner {
         max-width: 300px;
         margin-top: 20px;
     }
 }
 
-
-
-
-/*Fin bienvenue  */
-
-/* --- Style général --- */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    color: #181717;
-    
-    /* espace pour le header fixe */
-    padding-top: 200px;
-}
-.portfolio-intro {
-    text-align:left;
-    margin-bottom: 80px;
-}
-
-/* Logo */
-.nav-logo .logo-image {
-    height: 40px;
-    vertical-align: middle;
-}
-
-/* --- Container --- */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- Header --- */
+/* ---------- HEADER ET NAVIGATION ---------- */
 .site-header {
     background-color: #332f2f;
     padding: 30px 0;
@@ -161,7 +150,6 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* --- Navigation --- */
 .navigation-menu {
     display: flex;
     justify-content: center;
@@ -170,7 +158,7 @@ body {
 .nav-list {
     list-style: none;
     margin: 0 auto;
-    padding: 20;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,7 +167,6 @@ body {
     gap: 20px;
 }
 
-/* Liens du menu */
 .nav-list li a {
     text-decoration: none;
     color: #fff;
@@ -193,52 +180,41 @@ body {
     border-bottom: 2px solid #ff6347;
 }
 
-/* Logo */
 .nav-logo img {
     height: 50px;
     width: auto;
 }
 
-/* --- Responsive --- */
+/* Encadrer uniquement les liens sans image */
+.nav-list li a:not(:has(img)) {
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    padding: 8px 15px;
+    transition: all 0.3s;
+}
+
+.nav-list li a:not(:has(img)):hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+/* NAV RESPONSIVE */
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
     }
     .nav-list li a {
-        padding: 8px 0;
         font-size: 16px;
+        padding: 8px 0;
     }
     .nav-logo img {
         height: 40px;
     }
 }
 
-
-/* Encadrer uniquement les liens sans image */
-.nav-list li a:not(:has(img)) {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    padding: 8px 15px;
-    border: 2px solid #ff6347;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-/* Hover */
-.nav-list li a:not(:has(img)):hover {
-    background-color: #ff6347;
-    color: #fff;
-    border-color: #ff6347;
-}
-
-
-
-/* --- Image de fond --- */
+/* ---------- SECTION INTRO ---------- */
 .portfolio-intro {
     display: flex;
     align-items: center;
@@ -250,7 +226,6 @@ body {
     overflow: hidden;
 }
 
-/* Texte à gauche avec animation */
 .intro-text {
     flex: 1;
     opacity: 0;
@@ -258,7 +233,6 @@ body {
     animation: slideInLeft 1s forwards;
 }
 
-/* Image à droite avec animation */
 .intro-image {
     flex: 1;
     opacity: 0;
@@ -266,56 +240,17 @@ body {
     animation: slideInRight 1s forwards;
 }
 
-/* Animations */
-@keyframes slideInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
+@keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRight { to { opacity: 1; transform: translateX(0); } }
+
+@media (max-width: 900px) {
+    .portfolio-intro {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
-@keyframes slideInRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Image responsive */
-.portfolio-banner {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-.portfolio-banner:hover {
-    transform: scale(1.05) rotate(1deg); /* effet stylé au survol */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: row; /* garder horizontal */
-        justify-content: center; /* centrer les éléments */
-        gap: 10px; /* réduire un peu l’espacement si nécessaire */
-    }
-
-    .nav-list li a {
-        padding: 5px 8px; /* ajuster taille des liens */
-        font-size: 14px; /* un peu plus petit si besoin */
-    }
-
-    .nav-logo img {
-        height: 40px; /* garder le logo proportionnel */
-    }
-}
-
-
-/* --- Section Compétences --- */
-
-/* --- Projets --- */
+/* ---------- SECTION PROJETS ---------- */
 .projects {
     padding: 80px 20px;
     max-width: 1200px;
@@ -329,21 +264,17 @@ body {
     color: #333;
 }
 
-/* Grid des projets */
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
 }
 
-/* Cartes projets */
 .project-item {
     background-color: #f0f0f0;
     border-radius: 10px;
     padding: 25px 20px;
-    flex: 1 1 300px; /* largeur min 300px */
-    max-width: 350px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     opacity: 0;
     transform: translateY(50px);
@@ -351,24 +282,15 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Effet hover sur chaque projet */
 .project-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
-/* Animation entrée */
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
 
-/* Titres et textes */
 .project-item h3 {
     margin-top: 0;
-    margin-bottom: 15px;
     color: #ff6347;
 }
 
@@ -377,14 +299,7 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .project-list {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
- /* --- Compétences Technique--- */
+/* ---------- SECTION COMPÉTENCES ---------- */
 .skills {
     padding: 80px 20px;
     max-width: 1200px;
@@ -398,7 +313,6 @@ body {
     color: #333;
 }
 
-/* Liste des compétences */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -421,21 +335,13 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Effet hover */
 .skills-list li:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Animation entrée */
-@keyframes slideUpSkill {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@keyframes slideUpSkill { to { opacity: 1; transform: translateY(0); } }
 
-/* Responsive */
 @media (max-width: 768px) {
     .skills-list {
         flex-direction: column;
@@ -443,74 +349,12 @@ body {
     }
 }
 
-
-
-/* --- Footer --- */
-.site-footer {
-    background-color: #222;       /* fond sombre élégant */
-    color: #fff;                  /* texte clair */
-    text-align: center;           /* centré horizontalement */
-    padding: 30px 20px;           /* espace intérieur */
-    margin-top: 80px;             /* espace au-dessus du footer */
-    font-size: 0.95rem;           /* taille légèrement réduite */
-    letter-spacing: 0.5px;        /* espace subtil entre les lettres */
-    border-top: 3px solid #ff6347; /* rappel de la couleur principale */
-    position: relative;
-    overflow: hidden;
-    
-    max-width: 100%;   /* ou la largeur que tu souhaites */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Animation douce à l’arrivée */
-.site-footer p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease-out forwards;
-}
-
-/* Animation keyframe */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Effet visuel subtil en fond */
-.site-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,99,71,0.15), rgba(255,255,255,0.05), rgba(255,99,71,0.15));
-    animation: moveLight 6s linear infinite;
-    z-index: 0;
-}
-
-/* Animation du dégradé */
-@keyframes moveLight {
-    from { transform: translateX(-50%); }
-    to { transform: translateX(50%); }
-}
-
-.site-footer p {
-    position: relative;
-    z-index: 1; /* au-dessus de l’effet de fond */
-}
-/* Fin Footer */
-
-/*Contact Section*/
-/* --- Section Contact --- */
+/* ---------- SECTION CONTACT ---------- */
 .contact-section {
     padding: 100px 20px;
     background: #fafafa;
 }
 
-/* Conteneur principal (flexbox) */
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -520,10 +364,9 @@ body {
     gap: 50px;
 }
 
-/* --- Texte à gauche --- */
-.contact-text {
+.contact-text, .contact-form {
     flex: 1;
-    animation: fadeInLeft 1s forwards;
+    animation: fadeInRight 1s forwards;
 }
 
 .contact-text h2 {
@@ -532,35 +375,16 @@ body {
     margin-bottom: 15px;
 }
 
-.contact-text p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
 .contact-info {
     list-style: none;
     padding: 0;
 }
 
-.contact-info li {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* --- Formulaire à droite --- */
 .contact-form {
-    flex: 1;
     background: #fff;
     padding: 40px 30px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    animation: fadeInRight 1s forwards;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 .contact-form input,
@@ -570,7 +394,6 @@ body {
     border: 1.5px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -581,7 +404,6 @@ body {
     outline: none;
 }
 
-/* --- Bouton --- */
 .btn-submit {
     display: inline-block;
     background-color: #ff6347;
@@ -599,32 +421,102 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- Animations --- */
-@keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(-40px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInRight {
-    from { opacity: 0; transform: translateX(40px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-/* --- Responsive --- */
 @media (max-width: 900px) {
     .contact-container {
         flex-direction: column;
         gap: 30px;
     }
+}
 
-    .contact-form {
-        width: 100%;
+/* ---------- SECTION RÉALISATIONS ---------- */
+.realisations-section {
+    padding: 100px 20px;
+    background: #f9f9f9;
+}
+
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.realisation-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.realisation-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.realisation-info {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .realisation-image img {
+        height: 180px;
     }
 }
-    /*Fin bienvenue  */ 
 
-    /* --- Cookis --- */
-    /* --- Cookie Banner --- */
+/* ---------- SECTION VIDÉO ---------- */
+.realisation-video video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* ---------- SECTION FOOTER ---------- */
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    font-size: 0.95rem;
+    border-top: 3px solid #ff6347;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,99,71,0.15), rgba(255,255,255,0.05), rgba(255,99,71,0.15));
+    animation: moveLight 6s linear infinite;
+}
+
+@keyframes moveLight {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(50%); }
+}
+
+/* ---------- COOKIE BANNER ---------- */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -635,7 +527,7 @@ body {
     border-top: 2px solid #ff6347;
     box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
     z-index: 2000;
-    display: none; /* cachée par défaut */
+    display: none;
     animation: slideUp 0.8s ease forwards;
 }
 
@@ -644,25 +536,6 @@ body {
     margin: 0 auto;
     padding: 25px 20px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.cookie-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.cookie-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.cookie-content .read-more {
-    color: #ff6347;
-    text-decoration: none;
-    font-weight: 500;
 }
 
 .cookie-buttons {
@@ -701,26 +574,25 @@ body {
     transform: translateY(-2px);
 }
 
-/* Animation */
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive */
 @media (max-width: 600px) {
     .cookie-buttons {
         flex-direction: column;
         gap: 10px;
     }
 }
-    /* Fin Cookis  */
+
+
+
+
+
+
+
+
+
+
+
+
+/*Title Contact, Projet*/
 
 
 
@@ -777,123 +649,3 @@ body {
         font-size: 2rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Réalisations Section*/
-/* --- Section Réalisations --- */
-.realisations-section {
-    padding: 100px 20px;
-    background: #f9f9f9;
-    font-family: 'Roboto', sans-serif;
-}
-
-.realisations-section .section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.realisations-section .section-title h2 {
-    font-size: 2.8rem;
-    color: #222;
-    margin-bottom: 10px;
-}
-
-.realisations-section .section-title h2 span {
-    color: #ff6347;
-}
-
-.realisations-section .section-title p {
-    color: #555;
-    font-size: 1.1rem;
-}
-
-/* --- Grid des réalisations --- */
-.realisations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-/* --- Carte d'une réalisation --- */
-.realisation-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.realisation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* --- Image du projet --- */
-.realisation-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.realisation-card:hover .realisation-image img {
-    transform: scale(1.05);
-}
-
-/* --- Infos du projet --- */
-.realisation-info {
-    padding: 20px;
-}
-
-.realisation-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.realisation-info p {
-    color: #555;
-    line-height: 1.6;
-}
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .realisation-image img {
-        height: 180px;
-    }
-}
-
-
-
-
-
-/* Fin Réalisations Section */
-
-/*Css Video*/
-/* --- Section Vidéo --- */
-.realisation-video video {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-}
-
-
-
-
-
-
-
-/* Fin Vidéo Section */
